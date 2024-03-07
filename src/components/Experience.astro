@@ -1,20 +1,70 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro"
 const EXPERIENCIE = [
+
   {
-    date: "Actualmente...",
-    title: "Creador de Contenido",
-    company: "Twitch",
-    description:
-      "Divulgo sobre programación y desarrollo web en diferentes plataformas. Galardonado como mejor creador de contenido de habla no-inglesa en 2022 y mejor comunidad en 2023 por GitHub.",
-    link: "https://twitch.tv/midudev",
+    date: "Septiembre 2019 - Actualmente...",
+    title: "Full Stack Developer",
+    company: "Factpro SAC",
+    description: "",
+    projects: [
+      {
+        title: "Sistema de gestión de pedidos y ventas",
+        description: `Participé en la implementación de un sistema integral que permite gestionar pedidos y ventas con facturación electrónica. 
+        Stack: NodeJS, TypeScript, NestJS, PHP(Laravel), MYSQL, MongoDB, Redis, ReactJs, Docker, Git y Amazon Web Services(AWS).`,
+      },
+      {
+        title: "Sistema de ticket",
+        description: `Participé en la implementación de un sistema CRM para Whatsapp que ayuda a optimizar 
+        la atención a los clientes a través de la app de mensajería instantánea, añadiendo gestión de 
+        clientes con envío de mensajes masivos, textos rápidos, categorías y sistema de supervisión y roles.
+         Stack: NodeJS, TypeScript, PostgreSQL, Redis, ReactJs, Docker, Git y Amazon Web Services(AWS).`,
+      },
+      {
+        title: "Sistema facturación electrónica",
+        description: `Participé en la implementación de un sistema ERP con facturación electrónica, desarrollé el módulo de punto de venta, 
+        control de inventario y control de gastos. Stack: PHP(Laravel), MYSQL, Redis, Git, Javascript (VueJS) y Google Cloud.`,
+      },
+    ]
+    
   },
   {
-    date: "Septiembre 2022",
-    title: "Principal Frontend Engineer",
-    company: "Adevinta Spain",
+    date: "Febrero 2020 - Junio 2020",
+    title: "Co-Founder and CTO",
+    company: "FREDDY LA SAC",
+    description: `Gestione y desarrolle un sistema de pedidos para pymes. Utilizando NodeJS , VueJS, 
+    MongoDB, Docker, Amazon Web Services(AWS), Git, Jira, Planning poker y Lean Canvas.`,
+  },
+  // {
+  //   date: "Septiembre 2019 -  Diciembre 2020",
+  //   title: "Full Stack Developer",
+  //   company: "R M SOLUCIONES PERÚ SAC ",
+  //   description: `Participé en la implementación de un sistema ERP con facturación electrónica, desarrollé el módulo de punto de venta, 
+  //     control de inventario y control de gastos. Stack: PHP(Laravel), MYSQL, Redis, Git, Javascript (VueJS) y Google Cloud.`,
+  // },
+  {
+    date: "Julio 2019 - Agosto 2019",
+    title: "Freelancer",
+    company: "Search Perú",
     description:
-      "Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de aplicaciones web. Mejora de un 30% en la entrega de software. Implantación de medidas de integración continua y despliegue con A/B testing en más de 15 equipos.",
+      `Participé en la implementación de un sistema de acceso a la información en tiempo real de personas jurídicas y naturales. 
+      Stack: PHP(Laravel), MYSQL, Git, Javascript (VueJS), Vuetify Framework y Google Cloud.`,
+  },
+  {
+    date: "Febrero 2019 - Junio 2019",
+    title: "Full Stack Developer",
+    company: "JAGUAR SOFT SAC",
+    description:
+    `Participé en la implementación de un sistema integral que permite planificar y gestionar procesos académicos, administrativos y recaudación de 
+    pagos. Stack: PHP(Laravel), MYSQL, Git, Javascript (Jquery), CSS (Bootstrap).`,
+  },
+  {
+    date: "Octubre 2016 - diciembre 2018",
+    title: "Full Stack Developer",
+    company: "Consultoría LimaSoft SAC",
+    description:
+    `Participé en la implementación de un sistema CRM con gestión de llamadas, clientes, cuentas y recaudación pagos para empresas de cobranzas. 
+      Stack: PHP(Laravel), MYSQL, SQL SERVER, Redis, Docker, Git, Javascript (Jquery), CSS (Bootstrap).`,
   },
 ]
 ---

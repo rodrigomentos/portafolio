@@ -1,15 +1,21 @@
 ---
 import LinkInline from "./LinkInline.astro"
 
+interface Project {
+  title: string
+  description: string
+}
+
 interface Props {
   title: string
   company: string
   description: string
   link?: string
+  projects?: Array<Project>,
   date: string
 }
 
-const { title, company, description, link, date } = Astro.props
+const { title, company, description, link, date, projects } = Astro.props
 ---
 
 <div
@@ -52,5 +58,19 @@ const { title, company, description, link, date } = Astro.props
         </LinkInline>
       )
     }
+
+      { projects && projects.map((project) => (
+          <div class="relative pb-12 md:col-span-2">
+            <div class="sticky top-0">
+              <span class="text-gray-400 -left-[42px] absolute rounded-full text-5xl"
+                >&bull;</span
+              >
+              <h4 class="font-semibold text-xl text-gray-600 dark:text-white">{project.title}</h4>
+              <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">{project.description}</time>
+            </div>
+          </div>
+        ))
+      }
+   
   </div>
 </div>

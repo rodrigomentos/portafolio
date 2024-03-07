@@ -4,37 +4,128 @@ import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
+import Laravel from "./icons/Laravel.astro"
+import VUEJS from "./icons/Vue.astro"
+import Python from "./icons/Python.astro"
+import MongoDB from "./icons/MongoDB.astro"
+import Vuetify from "./icons/Vuetify.astro"
+import AWS from "./icons/AWS.astro"
+import Django from "./icons/Django.astro"
+import TypeScript from "./icons/TypeScript.astro"
+import NodeJS from "./icons/NodeJS.astro"
+import React from "./icons/React.astro"
+import PostgreSQL from "./icons/PostgreSQL.astro"
+import Docker from "./icons/Docker.astro"
+import Redis from "./icons/Redis.astro"
+import MySQL from "./icons/MySQL.astro"
+import NestJS from "./icons/NestJS.astro"
+
 
 const TAGS = {
-  NEXT: {
-    name: "Next.js",
-    class: "bg-black text-white",
-    icon: NextJS,
+  PYTHON: {
+    name: "Python",
+    class: "bg-white text-black",
+    icon: Python,
   },
-  TAILWIND: {
-    name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
-    icon: Tailwind,
+  MongoDB: {
+    name: "MongoDB",
+    class: "bg-white text-black",
+    icon: MongoDB,
   },
+  Vuetify: {
+    name: "Vuetify",
+    class: "bg-white text-black",
+    icon: Vuetify,
+  },
+  Django: {
+    name: "Django",
+    class: "bg-white text-black",
+    icon: Django,
+  },
+  AWS: {
+    name: "AWS",
+    class: "bg-white text-black",
+    icon: AWS,
+  },
+  LARAVEL: {
+    name: "Laravel",
+    class: "bg-white text-black",
+    icon: Laravel,
+  },
+  VUEJS: {
+    name: "VueJS",
+    class: "bg-white text-black",
+    icon: VUEJS,
+  },
+  TypeScript: {
+    name: "TypeScript",
+    class: "bg-white text-black",
+    icon: TypeScript,
+  },
+  NodeJS: {
+    name: "NodeJS",
+    class: "bg-white text-black",
+    icon: NodeJS,
+  },
+  NestJS: {
+    name: "NestJS",
+    class: "bg-white text-black",
+    icon: NestJS,
+  },
+  React: {
+    name: "React",
+    class: "bg-white text-black",
+    icon: React,
+  },
+  PostgreSQL: {
+    name: "PostgreSQL",
+    class: "bg-white text-black",
+    icon: PostgreSQL,
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-white text-black",
+    icon: MySQL,
+  },
+
+  Docker: {
+    name: "Docker",
+    class: "bg-white text-black",
+    icon: Docker,
+  },
+  Redis: {
+    name: "Redis",
+    class: "bg-white text-black",
+    icon: Redis,
+  },
+  
 }
 const PROJECTS = [
-  {
-    title: "SVGL - A beautiful library with SVG logos",
+{
+    title: "Sistema de gestión de pedidos y ventas",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
+      "Sistema integral que permite gestionar pedidos y ventas con facturación electrónica",
+    image: "/projects/freddy.webp",
+    tags: [TAGS.NestJS, TAGS.LARAVEL, TAGS.React, TAGS.Docker, TAGS.MongoDB, TAGS.MYSQL, TAGS.Redis,TAGS.AWS],
+  },
+  {
+    title: "CRM para Whatsapp",
+    description:
+      "sistema CRM para Whatsapp que ayuda a optimizar la atención a los clientes a través de la app.",
+    image: "/projects/whatsapp.webp",
+    tags: [TAGS.NodeJS, TAGS.TypeScript, TAGS.React, TAGS.Docker, TAGS.PostgreSQL, TAGS.Redis,TAGS.AWS],
+  },
+  {
+    title: "Predicción de disponibilidad de deudores",
+    description:"Sistema de predicción de disponibilidad de deudores para empresas de Call Center en el Perú.",
+    // link: "https://svgl.vercel.app/",
     github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    image: "/projects/prediction.webp",
+    tags: [TAGS.Django, TAGS.Vuetify, , TAGS.MongoDB,TAGS.AWS],
   },
-  {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
-    description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
+ 
+
+ // <ul class="flex flex-row mb-2 gap-x-2">
 ]
 ---
 
@@ -53,9 +144,9 @@ const PROJECTS = [
       {title}
     </h3>
     <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
+      <ul class="flex flex-wrap mb-2 gap-x-2">
           {tags.map((tag) => (
-            <li>
+            <li class="pt-3">
               <span
                 class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
               >
@@ -64,6 +155,7 @@ const PROJECTS = [
               </span>
             </li>
           ))}
+          
         </ul>
 
       <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
